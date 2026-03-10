@@ -421,7 +421,7 @@ footer p { font-size:.72rem; color:rgba(255,255,255,.3); letter-spacing:.08em; }
         Have a project in mind? Whether it's a campaign, an exhibition, a brand refresh, or a complex production challenge — I'd love to hear about it.
       </p>
       <div class="contact-items">
-        <div class="contact-item reveal reveal-delay-1"><div class="contact-item-icon">✉</div><div class="contact-item-text"><strong data-en="Email" data-fr="Email">Email</strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e07110b0c501b131f17123e1b131f1712501d1113">[email&#160;protected]</a></span></div></div>
+        <div class="contact-item reveal reveal-delay-1"><div class="contact-item-icon">✉</div><div class="contact-item-text"><strong data-en="Email" data-fr="Email">Email</strong><span>your.email@email.com</span></div></div>
         <div class="contact-item reveal reveal-delay-2"><div class="contact-item-icon">☎</div><div class="contact-item-text"><strong data-en="Phone" data-fr="Téléphone">Phone</strong><span>+00 000 000 000</span></div></div>
         <div class="contact-item reveal reveal-delay-3"><div class="contact-item-icon">⌖</div><div class="contact-item-text"><strong data-en="Location" data-fr="Localisation">Location</strong><span data-en="Your City, Country" data-fr="Votre Ville, Pays">Your City, Country</span></div></div>
         <div class="contact-item reveal reveal-delay-3"><div class="contact-item-icon">in</div><div class="contact-item-text"><strong>LinkedIn</strong><span>linkedin.com/in/mostafajakoum</span></div></div>
@@ -480,7 +480,7 @@ footer p { font-size:.72rem; color:rgba(255,255,255,.3); letter-spacing:.08em; }
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── CURSOR with smooth lag ──
 const cursor = document.getElementById('cursor');
 const ring   = document.getElementById('cursorRing');
@@ -738,4 +738,10 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProject
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.btn-submit');
-  btn.textContent = currentLang === 'fr' ? 'Message Envoyé �
+  btn.textContent = currentLang === 'fr' ? 'Message Envoyé ✓' : 'Message Sent ✓';
+  btn.style.background = '#1B5E20'; btn.style.color = '#fff';
+  setTimeout(() => { btn.style.background=''; btn.style.color=''; setLang(currentLang); e.target.reset(); }, 3000);
+}
+</script>
+</body>
+</html>
